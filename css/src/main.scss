@@ -149,6 +149,7 @@ $red: #A61E2F;
 
 .aside {
 	background: $teal-light;
+	position: relative;
 
 	@include respond-to( 768px) { 
 		margin-top: 30px; 
@@ -158,6 +159,19 @@ $red: #A61E2F;
 
 	.pad {
 		padding: 20px;
+	}
+
+	input[type=reset] {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+		padding: 10px;
+		font-size: 18px;
+		line-height: 18px;
+		border-radius: 10px;
+		background: darken( $teal-light, 30% );
+		border: 0;
+		color: white;
 	}
 }
 
