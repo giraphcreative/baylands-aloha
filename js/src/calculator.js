@@ -3,11 +3,11 @@
 $(function(){
 	
 	var recalculate_total = function(){
-			var total = parseFloat( typeof( $(".result.credit").html() )!=="undefined" ? $(".result.credit").html() : 0 )+
-				parseFloat( typeof( $(".result.loan-auto").html() )!=="undefined" ? $(".result.loan-auto").html() : 0 )+
-				parseFloat( typeof( $(".result.loan-personal").html() )!=="undefined" ? $(".result.loan-personal").html() : 0 );
+			var total = parseFloat( typeof( $(".result.credit").html() )!=="undefined" ? $(".result.credit").html().replace("$","") : 0 )+
+				parseFloat( typeof( $(".result.loan-auto").html() )!=="undefined" ? $(".result.loan-auto").html().replace("$","") : 0 )+
+				parseFloat( typeof( $(".result.loan-personal").html() )!=="undefined" ? $(".result.loan-personal").html().replace("$","") : 0 );
 			if ( total>0 ) {
-				$(".result.total").html("Congratulations!<br />You can save $"+total.toFixed(2)+" in interest!");
+				$(".result.total").html("Save up to $"+total.toFixed(2)+"!");
 			} else {
 				$(".result.total").html("See your loan<br>savings here:");
 			}

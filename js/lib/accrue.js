@@ -215,7 +215,7 @@
         } else {
 
             // if the values for the loan calculation aren't valid, provide an error.
-            output_elem.html( '<p class="error">'+options.error_text+'</p>' );
+            output_elem.html( options.error_text );
         }
 
         // run the callback function after the calculation is done, including
@@ -277,12 +277,12 @@
                 .replace( "%b_num_payments%", loan_1_info.num_payments )
                 .replace( "%b_total_payments%", loan_1_info.total_payments_formatted )
                 .replace( "%b_total_interest%", loan_1_info.total_interest_formatted );
-            output_elem.html( '<p class="total-savings">'+output_content+'</p>' );
+            output_elem.html( output_content );
         
         } else {
 
             // output an error
-            output_elem.html( '<p class="error">'+options.error_text+'</p>' );
+            output_elem.html( options.error_text );
 
         }
 
@@ -360,7 +360,7 @@
         } else {
 
             // Values aren't good yet, show the error.
-            output_elem.html( '<p class="error">'+options.error_text+'</p>' );
+            output_elem.html( options.error_text );
         }
 
         // Execute callback, passing in loan information.
