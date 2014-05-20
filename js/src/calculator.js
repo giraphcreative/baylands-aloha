@@ -3,9 +3,9 @@
 $(function(){
 	
 	var recalculate_total = function(){
-			var total = parseFloat( typeof( $(".result.credit").html() )!=="undefined" ? $(".result.credit").html().replace("$","") : 0 )+
-				parseFloat( typeof( $(".result.loan-auto").html() )!=="undefined" ? $(".result.loan-auto").html().replace("$","") : 0 )+
-				parseFloat( typeof( $(".result.loan-personal").html() )!=="undefined" ? $(".result.loan-personal").html().replace("$","") : 0 );
+			var total = parseFloat( typeof( $(".result.credit").html() )!=="undefined" ? $(".result.credit").html().replace("$","").replace(",","") : 0 )+
+				parseFloat( typeof( $(".result.loan-auto").html() )!=="undefined" ? $(".result.loan-auto").html().replace("$","").replace(",","") : 0 )+
+				parseFloat( typeof( $(".result.loan-personal").html() )!=="undefined" ? $(".result.loan-personal").html().replace("$","").replace(",","") : 0 );
 			if ( total>0 ) {
 				$(".result.total").html("Save up to $"+total.toFixed(2)+"!");
 			} else {
