@@ -2,9 +2,8 @@
 $blue: #243254;
 $teal-dark: #017178;
 $teal-light: #92D4D0;
-$green: #9CBB67;
-$red: #E92127;
-$grey: #979B9F;
+$green: #9BBA67;
+$red: #A61E2F;
 
 @import "reset";
 
@@ -44,17 +43,16 @@ $grey: #979B9F;
 	display: none;
 
 	h1 {
-		background: black;
+		background: $blue;
 		padding: 15px;
 		text-align: center;
 		font-size: 24px;
-		line-height: 30px;
 		color: white;
 	}
 
 	@include respond-to( 500px ) { display: block; }
 
-	@include respond-to( 1024px ) { border: 15px solid black; }
+	@include respond-to( 1024px ) { border: 15px solid $blue; }
 
 	@include respond-to( 1220px ) { margin-top: 40px; }
 }
@@ -66,10 +64,10 @@ $grey: #979B9F;
 
 .header-small img, .header-large img { margin-bottom: -6px; }
 
-.blue { background: $red; }
-.teal-dark { background: $green; }
-.teal-light { background: lighten( $green, 10% ); }
-.green {  background: $grey; }
+.blue { background: $blue; }
+.teal-dark { background: $teal-dark; }
+.teal-light { background: $teal-light; }
+.green { background: $green; }
 
 .blue, .teal-dark, .teal-light, .green { color: white; }
 
@@ -136,6 +134,7 @@ $grey: #979B9F;
 
 
 .more-info {
+	background: $teal-light;
 	padding: 20px;
 	text-align: center;
 	border-bottom: 10px solid darken( $teal-dark, 15% );
@@ -143,7 +142,7 @@ $grey: #979B9F;
 	@include respond-to( 768px ) {
 		margin-top: 30px;
 		border-radius: 25px;
-		border: 10px solid black;
+		border: 10px solid darken( $teal-dark, 15% );
 	}
 }
 
@@ -157,35 +156,30 @@ td .result {
 
 
 .aside {
+	background: $teal-light;
+	position: relative;
+
 	@include respond-to( 768px) { 
 		margin-top: 30px; 
 		border-radius: 25px;
-		border: 10px solid black;
+		border: 10px solid darken( $teal-dark, 15% );
 	}
 
 	.pad {
 		padding: 20px;
 	}
 
-
-	input[type=reset], .button {
-		display: block;
+	input[type=reset] {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
 		padding: 10px;
 		font-size: 18px;
 		line-height: 18px;
 		border-radius: 10px;
-		background: $grey;
+		background: darken( $teal-light, 30% );
 		border: 0;
 		color: white;
-		text-align: center;
-		width: 100%;
-	}
-
-	.button {
-		background: $red;
-		font-size: 24px;
-		line-height: 30px;
-		margin-bottom: 5px;
 	}
 }
 
@@ -203,7 +197,7 @@ td .result {
 		padding-top: 40px;
 	}
 
-	.sixty, .fifty, .fourty {
+	.sixty, .fourty {
 		text-align: center;
 	}
 
