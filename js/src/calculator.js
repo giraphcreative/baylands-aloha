@@ -9,7 +9,7 @@ $(function(){
 			if ( total>0 ) {
 				$(".result.total").html("Save up to $"+total.toFixed(2)+"!");
 			} else {
-				$(".result.total").html("See your loan<br>savings here:");
+				$(".result.total").html("See your<br>savings here:");
 			}
 		};
 
