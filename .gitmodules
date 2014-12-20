@@ -1,0 +1,3 @@
+[submodule "fittext"]
+	path = js/fittext
+	url = git@github.com:jpederson/FitText.js.git
