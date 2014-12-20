@@ -11,11 +11,11 @@ body {
 }
 
 a {
-	color: darken( $green, 10% );
+	color: darken( $link-color, 10% );
 	text-decoration: none;
 
 	&:hover {
-		color: $green;
+		color: $link-color;
 	}
 
 	&.no-dots {
@@ -50,7 +50,7 @@ h3 {
 h4 {
 	font-size: 1.8em;
 	line-height: 1.3em;
-	color: $blue;
+	color: $link-color;
 }
 
 
@@ -66,6 +66,7 @@ input[type=text], select {
 	border-radius: 15px;
 	-webkit-appearance: none;
 	background: white;
+	border: 3px solid $red;
 
 	&.amount {
 		background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeBAMAAACcf1DPAAAAIVBMVEUAAACkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT7b4aZAAAACnRSTlMAm4ApQMYQ3W1QNQOf6wAAAIRJREFUKM9joA3gVMMlw7qEZJmkqlXLG7BJsFWtWrVKAJsM46pKl4kTsMlwrXLAYQ3XchCJXY8BkMRuz6IE7DLMq1YtxKErESiFQ5fRqlUBOKxiWrUYl/ukFuGS6cIpE4VVhiOBgQO7PVarQnGEddcqoH+w2sGiGLXQgHrpgIHZjYGWAADGBCLRA4y1vAAAAABJRU5ErkJggg==') left center no-repeat;

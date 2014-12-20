@@ -53,6 +53,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%= jsDir %>/main.js': [
                         '<%= jsLibDir %>/*.js',
+                        'js/fittext/jquery.fittext.js',
                         '<%= jsSrcDir %>/*.js',
                     ],
                 }
