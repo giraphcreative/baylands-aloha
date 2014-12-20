@@ -85,27 +85,3 @@ select {
 	width: 100%;
 }
 
-
-table {
-	width: 100%;
-
-	tr {
-		td {
-			vertical-align: middle;
-			padding: 10px;
-			width: 45%;
-			font-size: 15px;
-			line-height: 17px;
-
-			&.label {
-				font-weight: bold;
-				font-size: 18px;
-				width: 55%;
-			}
-
-			.result {
-				font-size: 1.6em;
-			}
-		}
-	}
-}

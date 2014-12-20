@@ -25,13 +25,13 @@
 
 	<div class="calculators wrap">
 		
-		<div class="three-quarter">
+		<div class="main">
 
-			<div class="loan-auto calculator red group">
+			<div class="loan-auto calculator red">
 				<div class="third first">
 					<h3>Auto Loans</h3>
 					<div class="rate-display">
-						<span class="start">as<br>low<br>as</span>
+						<div class="start">Rates as low as</div>
 						<h2>1.49</h2>
 						<span class="end">%<br>APR*</span>
 					</div>
@@ -54,14 +54,14 @@
 						</select>
 					</p>
 				</div>
-				<div class="clear"></div>
+				<div class="group"></div>
 			</div>
 
-			<div class="loan-personal calculator teal group">
+			<div class="loan-personal calculator teal">
 				<div class="third first">
 					<h3>Personal Loans</h3>
 					<div class="rate-display">
-						<span class="start">as<br>low<br>as</span>
+						<div class="start">Rates as low as</div>
 						<h2>7.50</h2>
 						<span class="end">%<br>APR*</span>
 					</div>
@@ -82,14 +82,14 @@
 						</select>
 					</p>
 				</div>
-				<div class="clear"></div>
+				<div class="group"></div>
 			</div>
 
-			<div class="credit calculator navy group">
+			<div class="credit calculator navy">
 				<div class="third first">
 					<h3>Credit Cards</h3>
 					<div class="rate-display">
-						<span class="start">as<br>low<br>as</span>
+						<div class="start">Rates as low as</div>
 						<h2>8.90</h2>
 						<span class="end">%<br>APR*</span>
 					</div>
@@ -100,7 +100,7 @@
 					<input type="hidden" class="term" value="12m" />
 					<input type="hidden" class="rate_compare" value="8.90" />
 				</div>
-				<div class="clear"></div>
+				<div class="group"></div>
 			</div>
 
 			<div class="more-info">
@@ -110,27 +110,26 @@
 
 		</div>
 		
-		<div class="quarter aside">
+		<div class="aside">
 			<div class="pad">
-				<h3 class="result total">See your<br>savings here:</h3>
+				<h3 class="result total">See your savings here:</h3>
 			</div>
 
-			<div class="center">
-				<table cellpadding="10" cellspacing="0" border="0">
-					<tr>
-						<td class="blue-bg label">Auto Loans</td>
-						<td class="blue-bg">up to <span class="result loan-auto"></span> in savings</td>
-					</tr>
-					<tr>
-						<td class="teal-bg label">Personal Loans</td>
-						<td class="teal-bg">up to <span class="result loan-personal"></span> in savings</td>
-					</tr>
-					<tr>
-						<td class="green-bg label">Credit Cards</td>
-						<td class="green-bg">up to <span class="result credit"></span> in savings</td>
-					</tr>
-				</table>
-			</div>
+			<table cellpadding="10" cellspacing="0" border="0">
+				<tr>
+					<td class="red-bg label">Auto Loans</td>
+					<td class="red-bg">up to <span class="result loan-auto"></span> in savings</td>
+				</tr>
+				<tr>
+					<td class="teal-bg label">Personal Loans</td>
+					<td class="teal-bg">up to <span class="result loan-personal"></span> in savings</td>
+				</tr>
+				<tr>
+					<td class="navy-bg label">Credit Cards</td>
+					<td class="navy-bg">up to <span class="result credit"></span> in savings</td>
+				</tr>
+			</table>
+
 			<div class="pad">
 				<a href="http://www.baylandsfcu.org/asp/loan.asp" class="button">Apply Now!</a>
 				<input type="reset" value="Try Again" title="Clear values from all fields.">
