@@ -337,12 +337,8 @@ td .result {
 	color: white;
 	padding: 30px;
 	font-size: 24px;
-	line-height: 1.3em;
+	line-height: 1.2em;
 	text-align: center;
-
-	@include respond-to( 768px ) {
-		line-height: 3em;
-	}
 }
 
 
