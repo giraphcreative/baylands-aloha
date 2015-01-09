@@ -116,7 +116,7 @@ $link-color: $navy;
 			}
 
 
-			@include respond-to( 1024px ) {
+			@include respond-to( 768px ) {
 				&.credit, &.loan-auto, &.loan-personal {
 					position: relative;
 					padding: 20px 20px 20px 12%;
