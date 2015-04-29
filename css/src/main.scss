@@ -1,9 +1,12 @@
 
-$teal: #188188;
-$navy: #253354;
-$green: #9BBA67;
+$teal: #00ADE5;
+$navy: #243254;
+$green: #73B643;
+$lime: #A8C538;
 $red: #ED2024;
 $grey: #979B9F;
+$seafoam: #92D4D0;
+$sky: #96D9ED;
 
 $link-color: $navy;
 
@@ -24,7 +27,6 @@ $link-color: $navy;
 	@include respond-to( 768px ) {
 		background: url(../img/bg-body.jpg) center center no-repeat;
 		background-size: cover;
-		padding-bottom: 40px;
 	}
 }
 
@@ -39,52 +41,30 @@ $link-color: $navy;
 }
 
 
-// shade styles
-.shade {
-	@include respond-to( 768px ) {
-		background: url(../img/ropes.png) center center no-repeat;
-		background-size: cover;
-		background-size: contain;
+
+// wavecrest
+.wave-crest {
+	margin-top: -20px;
+
+	img {
+		width: 100%;
+		display: block;
 	}
 }
 
 
-// header stuffs
-.header {
-	max-width: 1024px;
-	margin: 0 auto;
 
-	h1 {
-		background: white;
-		padding: 15px 15px 5px 15px;
-		text-align: center;
-		font-size: 40px;
-		line-height: 1em;
-		color: black;
-		@include font-title;
-	}
-
-	h2 {
-		background: white;
-		padding: 5px 20px 15px 20px;
-		text-align: center;
-		font-size: 30px;
-		line-height: 1.3em;
-		color: black;
-	}
-
-	@include respond-to( 768px ) { border: 15px solid $red; }
-
+// calculator container
+.calculator-container {
+	@include clearfix;
+	background: $sky;
+	padding-bottom: 40px;
 }
-
 
 
 
 // calculator styles
 .calculators {
-	@include respond-to( 768px ) { padding: 0 30px; }
-	@include respond-to( 1220px ) { padding: 0; }
-	
 	.main {
 		@include respond-to( 1024px ) {
 			padding: 0 20px;
@@ -95,16 +75,17 @@ $link-color: $navy;
 		.calculator {
 			padding: 20px;
 			background: white;
+			color: white;
+
+			&.navy { background-color: $navy; }
+			&.teal { background-color: $teal; }
+			&.seafoam { background-color: $seafoam; }
+			&.lime { background-color: $lime; }
 
 			@include respond-to( 768px ) {
 				margin-top: 30px;
 				border-radius: 25px;
 				padding: 20px;
-
-				&.red { border: 10px solid $red; }
-				&.navy { border: 10px solid $navy; }
-				&.teal { border: 10px solid $teal; }
-				&.green { border: 10px solid $green; }
 
 				.third { 
 					width: 30%;
@@ -119,32 +100,7 @@ $link-color: $navy;
 			@include respond-to( 768px ) {
 				&.credit, &.loan-auto, &.loan-personal {
 					position: relative;
-					padding: 20px 20px 20px 12%;
-
-					&:before {						
-						position: absolute;
-						left: -30px;
-						top: -30px;
-						bottom: -30px;
-						width: 30%;
-						content: "";
-					}
-				}
-				
-				&.loan-auto:before {
-					background: url(../img/sucker-auto.png) center center no-repeat;
-				}
-				
-				&.loan-personal:before {
-					background: url(../img/sucker-personal.png) center center no-repeat;
-				}
-				
-				&.credit:before {
-					background: url(../img/sucker-credit.png) center center no-repeat;
-				}
-
-				&.loan-personal:before, &.loan-auto:before, &.credit:before {
-					background-size: contain;
+					padding: 20px;
 				}
 			}
 
@@ -203,26 +159,13 @@ $link-color: $navy;
 
 	.aside {
 		margin-top: 30px; 
-		background: white;
-
+	
 		@include respond-to( 768px) { 
 			border-radius: 25px;
-			border: 10px solid black;
-		}
+			border: 10px solid $navy;
 
-		@include respond-to( 1024px ) {
-			float: left;
-			width: 32%;
-			margin-left: 3%;
-
-			&:after {
-				content: " ";
-				background: url(../img/lollipop.png) center center no-repeat;
-				width: 200px;
-				height: 425px;
-				position: absolute;
-				bottom: 50px;
-				right: 60px;
+			&.third {
+				padding: 0 0;
 			}
 		}
 
@@ -238,9 +181,10 @@ $link-color: $navy;
 					line-height: 17px;
 					color: white;
 
-					&.red-bg { background: $red; }
-					&.navy-bg { background: $navy; }
-					&.teal-bg { background: $teal; }
+					&.navy { background: $navy; }
+					&.teal { background: $teal; }
+					&.seafoam { background: $seafoam; }
+					&.lime { background: $lime; }
 
 					&.label {
 						@include font-title;
@@ -257,7 +201,7 @@ $link-color: $navy;
 		}
 
 		.pad {
-			padding: 20px;
+			padding: 10px 0;
 		}
 
 		.center {
@@ -282,11 +226,13 @@ $link-color: $navy;
 			width: 100%;
 		}
 
-		.button {
-			background: $red;
-			font-size: 24px;
-			line-height: 30px;
-			margin-bottom: 5px;
+		.apply {
+			display: block;
+			margin: 0 0 0 auto;
+		}
+
+		.try-again {
+			margin: -40px 0 0 20px;
 		}
 	}
 	
@@ -294,28 +240,17 @@ $link-color: $navy;
 
 
 .more-info {
-	padding: 20px 20px 0;
+	padding: 20px;
 	text-align: center;
 	position: relative;
-	background: white;
-	color: black;
+	background: $green;
+	color: #231F20;
 
 	@include respond-to( 768px ) {
-		padding: 20px 20px 20px 15%;
+		padding: 20px;
 		margin-top: 30px;
 		border-radius: 25px;
-		border: 10px solid $green;
-
-		&:before {
-			position: absolute;
-			left: -30px;
-			top: -30px;
-			bottom: -30px;
-			width: 30%;
-			content: "";
-			background: url(../img/sucker-home.png) center center no-repeat;
-			background-size: contain;
-		}
+		border: 10px solid #231F20 ;
 	}
 
 	h3 {
@@ -327,6 +262,14 @@ $link-color: $navy;
 	p {
 		line-height: 1.3em;
 		padding: 7px 0;
+	}
+
+	a {
+		color: #231F20;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 }
@@ -347,17 +290,8 @@ td .result {
 	color: white;
 	padding: 30px;
 	text-align: center;
-
-	h2 {
-		font-size: 24px;
-		line-height: 1.2em;
-	}
-
-	h3 {
-		font-size: 20px;
-		line-height: 1.2em;
-	}
 }
+
 
 
 footer.fineprint {

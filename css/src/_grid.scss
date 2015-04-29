@@ -1,6 +1,6 @@
 
 @include respond-to( 768px ) {
-	.sixty, .fifty, .fourty, .quarter, .three-quarter, .third, .eighty, .twenty {
+	.sixty, .fifty, .fourty, .third, .quarter, .three-quarter, .third, .eighty, .twenty, .two-third {
 		float: left;
 	}
 
@@ -41,4 +41,14 @@
 		width: 20%;
 		padding: 0 15px;
 	}
+
+	.two-third {
+		width: 66%;
+		padding: 0 15px;
+	}
+}
+
+
+.text-center {
+	text-align: center;
 }
